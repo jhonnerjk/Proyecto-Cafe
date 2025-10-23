@@ -13,6 +13,7 @@ git clone <URL-del-repo>
 cd ANMI CAFE
 ```
 ## como subir el archivo al repositorio para que los demas colaboradores vean los cambios
+## deben estar dentro del archivo
 ```bash
 # Verificar qué archivos cambiaron
 git status
