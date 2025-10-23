@@ -1,0 +1,10 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f7f6"/>
+  <ellipse cx="200" cy="200" rx="80" ry="15" fill="#DEB887"/>
+  <path d="M120 200 Q120 140 200 120 Q280 140 280 200" fill="#D2B48C" stroke="#A0522D" stroke-width="2"/>
+  <ellipse cx="200" cy="120" rx="80" ry="20" fill="#F5DEB3"/>
+  <path d="M180 100 Q200 80 220 100" fill="#8B4513"/>
+  <circle cx="190" cy="150" r="5" fill="#654321"/>
+  <circle cx="210" cy="160" r="5" fill="#654321"/>
+  <text x="200" y="260" font-family="Arial" font-size="16" fill="#666" text-anchor="middle">Postre de Café</text>
+</svg>
