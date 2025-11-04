@@ -1,30 +1,39 @@
 import React from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import ImportedDashboard from './components/ImportedDashboard'
-import SampleRegistration from './components/SampleRegistration'
-import RegistrationSuccess from './components/RegistrationSuccess'
-import FruitsCatalog from './components/FruitsCatalog'
-import SensoryEvaluation from './components/SensoryEvaluation'
-import SamplingMaps from './components/SamplingMaps'
-import Recipes from './components/Recipes'
-import UserProfile from './components/UserProfile'
-import AdminDashboard from './components/AdminDashboard'
+import { AuthProvider } from './contexts/AuthContext'
+import ProtectedRoute from './components/ProtectedRoute'
+import CommunityDashboard from './pages/CommunityDashboard'
+import ExploreRecipes from './pages/ExploreRecipes'
+import RestaurantsGuide from './pages/RestaurantsGuide'
+import Store from './pages/Store'
+import UserProfile from './pages/UserProfile'
+import ModerationPanel from './pages/ModerationPanel'
+import Login from './pages/Login'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<ImportedDashboard />} />
-      <Route path="/registro" element={<SampleRegistration />} />
-      <Route path="/registro/exito" element={<RegistrationSuccess />} />
-      <Route path="/catalogo" element={<FruitsCatalog />} />
-      <Route path="/evaluacion" element={<SensoryEvaluation />} />
-      <Route path="/mapas" element={<SamplingMaps />} />
-      <Route path="/recetas" element={<Recipes />} />
-      <Route path="/perfil" element={<UserProfile />} />
-      <Route path="/admin" element={<AdminDashboard />} />
-    </Routes>
+    <AuthProvider>
+      <Routes>
+        <Route path="/" element={<CommunityDashboard />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/recetas" element={<ExploreRecipes />} />
+        <Route path="/restaurantes" element={<RestaurantsGuide />} />
+        <Route path="/guia-restaurantes" element={<RestaurantsGuide />} />
+        <Route path="/tienda" element={<Store />} />
+        <Route path="/perfil" element={<UserProfile />} />
+        <Route 
+          path="/moderacion" 
+          element={
+            <ProtectedRoute requireAdmin={true}>
+              <ModerationPanel />
+            </ProtectedRoute>
+          } 
+        />
+      </Routes>
+    </AuthProvider>
   )
 }
 
 export default App
+

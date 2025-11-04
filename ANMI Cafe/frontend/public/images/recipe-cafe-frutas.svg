@@ -1,8 +1,0 @@
-<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="300" fill="#f8f7f6"/>
-  <circle cx="200" cy="120" r="50" fill="#8B4513"/>
-  <circle cx="180" cy="180" r="25" fill="#FF6B6B"/>
-  <circle cx="220" cy="180" r="25" fill="#FFA500"/>
-  <circle cx="200" cy="210" r="25" fill="#FFD700"/>
-  <text x="200" y="260" font-family="Arial" font-size="16" fill="#666" text-anchor="middle">Café con Frutas</text>
-</svg>
